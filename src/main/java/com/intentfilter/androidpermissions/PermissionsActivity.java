@@ -1,12 +1,14 @@
 package com.intentfilter.androidpermissions;
 
+import static java.util.Arrays.asList;
+
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.intentfilter.androidpermissions.helpers.Logger;
 import com.intentfilter.androidpermissions.models.DeniedPermission;
@@ -16,8 +18,6 @@ import com.intentfilter.androidpermissions.services.BroadcastService;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
-import static java.util.Arrays.asList;
 
 public class PermissionsActivity extends AppCompatActivity {
     static final int PERMISSIONS_REQUEST_CODE = 100;
@@ -52,6 +52,7 @@ public class PermissionsActivity extends AppCompatActivity {
         logger.i("RequestPermissionsResult, sending broadcast for permissions " + Arrays.toString(permissions));
 
         sendPermissionResponse(permissions, grantResults);
+        getIntent().putStringArrayListExtra(EXTRA_PERMISSIONS, null);
         finish();
     }
 
@@ -69,5 +70,21 @@ public class PermissionsActivity extends AppCompatActivity {
         }
 
         new BroadcastService(this).broadcastPermissionRequestResult(grantedPermissions, deniedPermissions);
+    }
+
+    @Override
+    protected void onStop() {
+        String[] permissions = getIntent().getStringArrayExtra(EXTRA_PERMISSIONS);
+
+        logger.i("Permission request activity stopped, permission extra: " + (permissions == null ? "null" : "" + permissions.length));
+
+        if (permissions != null && permissions.length > 0) {
+            // when the activity is stopped and the array is not empty the user left without allowing/denying anything. assume denied then
+            int[] grantResults = new int[permissions.length];
+            Arrays.fill(grantResults, PackageManager.PERMISSION_DENIED);
+            sendPermissionResponse(permissions, grantResults);
+        }
+
+        super.onStop();
     }
 }
