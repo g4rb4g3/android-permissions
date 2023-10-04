@@ -4,7 +4,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
 
@@ -33,12 +33,12 @@ def getVersionName = {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "28.0.3"
+    compileSdk 33
+    buildToolsVersion = '33.0.0'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode getVersionCode()
         versionName getVersionName()
     }
@@ -115,5 +115,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
     implementation 'org.parceler:parceler-api:1.1.12'
+    testImplementation project(':')
     annotationProcessor 'org.parceler:parceler:1.1.12'
 }
