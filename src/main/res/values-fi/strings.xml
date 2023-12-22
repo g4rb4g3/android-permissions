@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Dynamic Permissions</string>
+    <string name="message_permission_required">Sovellus tarvitsee luvan, jotta jotkut ominaisuudet toimivat oikein</string>
+    <string name="title_permission_required">Lupa vaaditaan</string>
+    <string name="notification_channel_name">Käyttöoikeudet</string>
+</resources>

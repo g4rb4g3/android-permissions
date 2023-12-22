@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Dynamic Permissions</string>
+    <string name="message_permission_required">Az alkalmazásnak engedélyre van szüksége bizonyos funkciók megfelelő működéséhez</string>
+    <string name="title_permission_required">Engedély szükséges</string>
+    <string name="notification_channel_name">Engedélyek</string>
+</resources>

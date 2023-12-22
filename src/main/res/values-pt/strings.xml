@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Dynamic Permissions</string>
+    <string name="message_permission_required">O aplicativo precisa de permissão para que alguns recursos funcionem corretamente</string>
+    <string name="title_permission_required">Permissão necessária</string>
+    <string name="notification_channel_name">Permissões</string>
+</resources>

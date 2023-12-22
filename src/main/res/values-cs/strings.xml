@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Dynamic Permissions</string>
+    <string name="message_permission_required">Aplikace potřebuje oprávnění, aby některé funkce fungovaly správně</string>
+    <string name="title_permission_required">Vyžaduje se povolení</string>
+    <string name="notification_channel_name">Oprávnění</string>
+</resources>
