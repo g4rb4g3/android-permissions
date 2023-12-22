@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android Dynamic Permissions</string>
     <string name="message_permission_required">Appen trenger tillatelse for at enkelte funksjoner skal fungere skikkelig</string>
     <string name="title_permission_required">Tillatelse kreves</string>
     <string name="notification_channel_name">Tillatelser</string>

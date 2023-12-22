@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android Dynamic Permissions</string>
     <string name="message_permission_required">Appen behöver tillstånd för att vissa funktioner ska fungera korrekt</string>
     <string name="title_permission_required">Tillstånd krävs</string>
     <string name="notification_channel_name">Behörigheter</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android Dynamic Permissions</string>
     <string name="message_permission_required">Приложению требуется разрешение для правильной работы некоторых функций.</string>
     <string name="title_permission_required">Требуется разрешение</string>
     <string name="notification_channel_name">Разрешения</string>
