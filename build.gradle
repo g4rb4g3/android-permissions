@@ -4,7 +4,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:8.1.1'
     }
 }
 
@@ -33,6 +33,7 @@ def getVersionName = {
 }
 
 android {
+    namespace 'com.intentfilter.androidpermissions'
     compileSdk 33
     buildToolsVersion = '33.0.0'
 
