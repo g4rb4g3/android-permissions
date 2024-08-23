@@ -49,6 +49,9 @@ android {
             consumerProguardFiles 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 publishing {
